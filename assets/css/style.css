@@ -11314,7 +11314,7 @@ textarea:-webkit-autofill:focus {
 .masthead-avatar {
     border-radius: 50%;
     border: 1px solid white; /* Essential clean ring */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft, initial 'Architectural' shadow */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15); /* Soft, initial 'Architectural' shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     object-fit: cover; /* Ensures the crop is sharp */
     object-position: 50% 20%; /* Adjusts the crop focal point slightly up */
