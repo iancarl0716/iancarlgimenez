@@ -11284,3 +11284,44 @@ textarea:-webkit-autofill:focus {
 .form-floating > label {
     background-color: transparent !important;
 }
+
+/* Custom Cursor for Typewriter */
+.typewrite > .wrap {
+    border-right: 0.08em solid #fff;
+    animation: blink-caret 0.70s step-end infinite;
+    padding-right: 2px;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+/* Standard helper class to hide elements visually but keep them accessible */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Your Masthead Avatar CSS */
+.masthead-avatar {
+    border-radius: 50%;
+    border: 1px solid white; /* Essential clean ring */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft, initial 'Architectural' shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover; /* Ensures the crop is sharp */
+    object-position: 50% 20%; /* Adjusts the crop focal point slightly up */
+}
+
+/* Optional hover enhancement: The 'Pop and Glow' */
+.masthead-avatar:hover {
+    transform: translateY(-8px) scale(1.03); /* Lift and slight 'un-blur' */
+    box-shadow: 0 15px 40px rgba(216, 180, 172, 0.3); /* Adds a very soft beige 'glow' */
+}
