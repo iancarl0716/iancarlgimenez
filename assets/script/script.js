@@ -130,3 +130,11 @@ if (contactForm) {
         }
     });
 }
+
+// This triggers the fade-in for any page with the .thanks-page class
+window.addEventListener('DOMContentLoaded', () => {
+    const thanksBody = document.querySelector('.thanks-page');
+    if (thanksBody) {
+        thanksBody.classList.add('fade-in');
+    }
+});

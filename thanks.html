@@ -16,7 +16,7 @@
 	
 	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body onload="typeWriter();">
+<body class="thanks-page" onload="typeWriter();">
     <div class="thanks-container">
     <h2 class="text-uppercase">Message Received</h2>
     <div class="divider-custom divider-light">
@@ -27,5 +27,11 @@
     <p>Thank you for reaching out. I will review your inquiry and get back to you shortly.</p>
     <a href="index.html" class="custom-submit-btn" style="text-decoration:none;">Back to Portfolio</a>
 </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('fade-in');
+        });
+</script>
 </body>
 </html>
