@@ -93,3 +93,40 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+// Handle Contact Form Submission and Redirect
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault(); // Prevents the default Formspree redirect
+        
+        const formData = new FormData(contactForm);
+        const submitButton = document.getElementById('submitButton');
+        
+        // 1. Create a loading state (Spinner + Text)
+        const originalContent = submitButton.innerHTML;
+        submitButton.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> SENDING...`;
+        submitButton.disabled = true;
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                // 2. SUCCESS: Redirect to your specific GitHub URL
+                window.location.href = "https://iancarl0716.github.io/iancarlgimenez/thanks.html";
+            } else {
+                throw new Error('Submission failed');
+            }
+        } catch (error) {
+            // 3. ERROR: Reset button so they can try again
+            alert("Oops! There was a problem. Please try again.");
+            submitButton.innerHTML = originalContent;
+            submitButton.disabled = false;
+        }
+    });
+}
