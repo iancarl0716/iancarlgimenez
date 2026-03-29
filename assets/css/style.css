@@ -10843,6 +10843,7 @@ textarea.form-control-lg {
   }
 }
 html {
+  scroll-behavior: smooth !important;
   height: 100%;
   scroll-padding-top: calc(4.5rem - 1px);
 }
@@ -11325,4 +11326,47 @@ textarea:-webkit-autofill:focus {
 .masthead-avatar:hover {
     transform: translateY(-8px) scale(1.03); /* Lift and slight 'un-blur' */
     box-shadow: 0 15px 40px rgba(216, 180, 172, 0.3); /* Adds a very soft beige 'glow' */
+}
+
+/* Target only mobile screens where the burger menu triggers */
+@media (max-width: 991.98px) {
+  
+  /* 1. Force the collapse block to pull out of the container layout */
+  #mainNav .navbar-collapse {
+    position: absolute;
+    top: 100%; /* Sits perfectly flush right under your top bar */
+    left: 0;
+    right: 0;
+    width: 100vw; /* Forces it to ignore margins and go edge-to-edge */
+    
+    /* Let's paint that frosted transparency effect here */
+    background-color: rgba(116, 81, 103, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    
+    /* Clean sweep: removing borders and forced spacing */
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    padding: 1.5rem 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 2. Center the links inside that full width bar */
+  #mainNav .navbar-nav {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* 3. Smooth fade in transition when opening */
+  #mainNav .collapsing {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #mainNav .collapse.show {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
 }
