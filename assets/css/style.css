@@ -11370,3 +11370,16 @@ textarea:-webkit-autofill:focus {
     transition: all 0.3s ease-in-out;
   }
 }
+
+/* Hide all tabs by default */
+#pills-tabContent .tab-pane {
+    display: none;
+    opacity: 0;
+}
+
+/* Force the very first tab to be visible when the page loads */
+#pills-tabContent .tab-pane:first-child {
+    display: block;
+    opacity: 1;
+}
+
