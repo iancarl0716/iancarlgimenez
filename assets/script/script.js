@@ -156,31 +156,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $(document).ready(function() {
   // Select all links with hashes
-  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
-    // On-page links
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top - 70 // 70 is your navbar height offset!
-        }, 800, function() { // 800 is the speed in milliseconds
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
+  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[data-bs-toggle="pill"]').click(function(event) {
+   // 🔥 FIX: Only run this custom jQuery animation on Desktop screens!
+    if (window.innerWidth > 991) {
+      
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top - 70 // This stays for desktop!
+          }, 800, function() { 
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { 
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); 
+              $target.focus(); 
+            };
+          });
+        }
       }
-    }
+      
+    } 
+    // On mobile, doing nothing here lets the browser read your CSS "scroll-padding-top" natively!
   });
+});
+
+// ==========================================
+// 3. PORTFOLIO TABS: CUSTOM CROSS-FADE
+// ==========================================
+$(document).ready(function() {
+    $('#portfolio-tab .nav-link').click(function(e) {
+        e.preventDefault();
+        
+        // 1. Get target div ID
+        var target = $(this).attr('data-bs-target');
+        
+        // 2. Remove active class from all pills and add to this one
+        $('#portfolio-tab .nav-link').removeClass('active');
+        $(this).addClass('active');
+        
+        // 3. Fade out the visible pane, then fade in the new target pane
+        $('#pills-tabContent .tab-pane:visible').animate({ opacity: 0 }, 200, function() {
+            $(this).hide(); // Hide the old one completely
+            $(target).css('opacity', 0).show().animate({ opacity: 1 }, 300); // Fade in the new one!
+        });
+    });
 });
