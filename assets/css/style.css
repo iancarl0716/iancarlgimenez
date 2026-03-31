@@ -11480,3 +11480,13 @@ textarea:-webkit-autofill:focus {
   section.portfolio .portfolio-item .portfolio-item-caption {
     display: none !important;
   }
+
+/* Custom styling for embedded prototype */
+.prototype-wrapper iframe {
+  width: 100% !important;
+  height: 720px !important; /* This overrides the 600 in your HTML! */
+  border: 1px solid rgba(133, 88, 111, 0.2) !important; /* Soft theme color border */
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+  transition: height 0.3s ease; /* Smooth scaling if you change screen sizes */
+}
