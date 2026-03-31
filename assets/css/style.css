@@ -11014,61 +11014,6 @@ html {
     font-size: 1.5rem;
   }
 }
-.portfolio .portfolio-item {
-  cursor: pointer;
-  position: relative;
-  display: block;
-  max-width: 25rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-
-/* 1. Base Item */
-.portfolio .portfolio-item {
-  cursor: pointer;
-  position: relative;
-  display: block;
-  max-width: 25rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-/* 2. Image Zoom Effect */
-.portfolio .portfolio-item img {
-  transition: transform 0.4s ease-in-out;
-}
-
-.portfolio .portfolio-item:hover img {
-  transform: scale(1.08); /* Subtle zoom in */
-}
-
-/* 3. Softened Overlay with Frosted Glass look */
-.portfolio .portfolio-item .portfolio-item-caption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-  background-color: rgba(133, 88, 111, 0.7); /* Using your custom button color */
-  backdrop-filter: blur(4px); /* Adds a frosted glass effect */
-}
-
-/* Trigger caption on item hover, not just caption hover */
-.portfolio .portfolio-item:hover .portfolio-item-caption {
-  opacity: 1;
-}
-
-/* 4. Subtle scale for the Plus Icon */
-.portfolio .portfolio-item .portfolio-item-caption-content {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-  transform: scale(0.8);
-}
-
-.portfolio .portfolio-item:hover .portfolio-item-caption-content {
-  transform: scale(1); /* Icon grows slightly when revealed */
-}
 
 .footer {
   padding-top: 5rem;
