@@ -11367,3 +11367,116 @@ textarea:-webkit-autofill:focus {
     opacity: 1;
     transform: scale(1);
 }
+
+/* ==========================================================
+  THE WORK SECTION - PREMIUM HOVER UPGRADE
+  Using Theme Accent Color: rgba(133, 88, 111, x)
+  ========================================================== */
+  /* Ensure the image transitions smoothly */
+  section.portfolio .portfolio-item img {
+  width: 100% !important;
+  height: auto !important;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.00) !important;
+  }
+
+  /* Trigger the zoom on hover */
+  section.portfolio .portfolio-item:hover img {
+  transform: scale(1.05) !important; /* 1.05 is a perfect, subtle 5% zoom */
+  }
+
+  /* 1. Item Reset */
+  section.portfolio .portfolio-item {
+  position: relative !important;
+  overflow: hidden !important;
+  }
+
+  /* 2. THE CUSTOM FROSTED GLASS OVERLAY */
+  section.portfolio .portfolio-item .custom-hover-caption {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  
+  opacity: 0 !important;
+  visibility: hidden !important;
+  
+  background: linear-gradient(
+    180deg, 
+    rgba(133, 88, 111, 0.45) 0%,   
+    rgba(133, 88, 111, 0.75) 50%,  
+    rgba(20, 20, 20, 0.98) 100% /* Kept dark at the bottom for white text contrast */
+  ) !important;
+  
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out !important;
+  z-index: 10 !important;
+  }
+
+  section.portfolio .portfolio-item:hover .custom-hover-caption {
+  opacity: 1 !important;
+  visibility: visible !important;
+  }
+
+  /* 3. NEW FAIL-PROOF LAYOUT SYSTEM */
+  section.portfolio .portfolio-item .custom-hover-content {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+  }
+
+  /* Forces the Icon to dead center */
+  section.portfolio .portfolio-item .center-content-box {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-grow: 1 !important; /* Pushes everything else down */
+  }
+
+  /* Forces the Text to stay at the bottom */
+  section.portfolio .portfolio-item .bottom-text-box {
+  width: 100% !important;
+  padding-bottom: 2rem !important; /* Space from very bottom */
+  text-align: center !important;
+  }
+
+  /* 4. ICON ANIMATION */
+  section.portfolio .portfolio-item .plus-icon {
+  color: #ffffff !important;
+  opacity: 0 !important;
+  transform: scale(0.8) rotate(45deg) !important; 
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out !important;
+  }
+
+  section.portfolio .portfolio-item:hover .plus-icon {
+  opacity: 1 !important;
+  transform: scale(1) rotate(0deg) !important; 
+  }
+
+  /* 5. PROJECT TITLE ANIMATION */
+  section.portfolio .portfolio-item .thumbnail-title {
+  margin: 0 !important;
+  color: #ffffff !important; 
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  font-size: 0.9rem !important;
+  
+  opacity: 0 !important;
+  transform: translateY(15px) !important; 
+  transition: opacity 0.7s ease-out 0.1s, transform 0.7s ease-out 0.1s !important;
+  }
+
+  section.portfolio .portfolio-item:hover .thumbnail-title {
+  opacity: 1 !important;
+  transform: translateY(0) !important; 
+  }
+
+  /* HIDE OLD CAPTIONS TEMPORARILY UNTIL HTML IS UPDATED */
+  section.portfolio .portfolio-item .portfolio-item-caption {
+    display: none !important;
+  }
