@@ -11490,3 +11490,48 @@ textarea:-webkit-autofill:focus {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
   transition: height 0.3s ease; /* Smooth scaling if you change screen sizes */
 }
+
+/* ==========================================================
+   MODAL TYPOGRAPHY & READABILITY UPGRADE
+========================================================== */
+
+/* 1. Main Section Headings (e.g., 01. THE FRICTION) */
+.modal-body h2, 
+.modal-body h3 {
+    font-size: 1.5rem !important; /* Premium, balanced scale */
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important; /* Classic editorial tracked-out look */
+    color: #b0818c !important; /* Soft mauve accent color */
+    
+    /* Spacing around the heading */
+    margin-top: 2.5rem !important; /* Pushes previous section away */
+    margin-bottom: 1.2rem !important; /* Gives space before paragraph starts */
+}
+
+/* Force the very first heading to not have a massive top margin */
+.modal-body h2:first-of-type,
+.modal-body h3:first-of-type {
+    margin-top: 1rem !important;
+}
+
+/* 2. Body Paragraphs & List Text */
+.modal-body p, 
+.modal-body li {
+    font-size: 1rem !important; /* Ideal body size for screens */
+    line-height: 1.8 !important; /* Gives lines breathing room */
+    letter-spacing: 0.015em !important; /* Subtle space between letters */
+    color: #4A4A4A !important; /* Softer than pure black to reduce eye strain */
+}
+
+/* 3. Bold Accents (e.g., Cognitive Overload:) */
+.modal-body strong {
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+    color: #222222 !important; /* Makes bolded words pop slightly darker */
+}
+
+/* 4. List Item Spacing */
+.modal-body li {
+    margin-bottom: 1.2rem !important; /* Spaces out your bullet points */
+}
