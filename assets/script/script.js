@@ -208,3 +208,12 @@ $(document).ready(function() {
     });
 });
 
+const keepBookIDs = ['4', '6', '9'];
+
+document.querySelectorAll('.portfolio-item[data-type="book-cover"]').forEach(el => {
+  const id = el.dataset.id;
+
+  if (!keepBookIDs.includes(id)) {
+    el.closest('.col-md-6').style.display = 'none';
+  }
+});
