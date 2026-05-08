@@ -11,6 +11,57 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  /* ========= BRAND COLORS ========= */
+  --color-accent: #6B63FF;
+  --color-accent-light: #C9BFFF;
+  --color-accent-dark: #5B4FE0;
+
+  /* ========= SURFACES ========= */
+  --color-bg: #F5F7FC;
+  --color-surface: #FFFFFF;
+  --color-surface-dark: #1E2430;
+  --color-surface-dark-2: #2A3142;
+
+  /* ========= TEXT ========= */
+  --color-text: #1F2937;
+  --color-text-muted: #667085;
+  --color-text-light: #F9FAFB;
+
+  /* ========= BORDERS ========= */
+  --color-border: #D8DFEA;
+
+  /* ========= SHADOWS ========= */
+  --shadow-soft: 0 8px 30px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 12px 40px rgba(15, 23, 42, 0.15);
+
+  /* ========= TYPOGRAPHY ========= */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Lato", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 3rem;
+
+  /* ========= SPACING ========= */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* ========= RADIUS ========= */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* ========= TRANSITIONS ========= */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -35,7 +86,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #C3ACD0;
-  --bs-secondary: #AC7D88;
+  --bs-secondary: #9D92FF;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -43,17 +94,17 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 26, 188, 156;
-  --bs-secondary-rgb: 172, 125, 136;
+  --bs-secondary-rgb: 124, 108, 255;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
-  --bs-white-rgb: 255, 255, 255;
+  --bs-white-rgb: 245, 247, 252;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 103, 65, 136;
-  --bs-body-bg-rgb: 255, 251, 245;
+  --bs-body-bg-rgb: var(--color-bg);
   --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -61,8 +112,8 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #--bs-body-color;
-  --bs-body-bg: #F8ECD1;
+  --bs-body-color: var(--bs-body-color);
+  --bs-body-bg: var(--color-bg);
   --bs-border-width: 0.125rem;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -73,10 +124,10 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #AC7D88;
-  --bs-link-hover-color: #DEB6AB;
+  --bs-link-color: var(--color-accent);
+  --bs-link-hover-color: var(--color-accent-light);
   --bs-code-color: #d63384;
-  --bs-highlight-bg: #fff3cd;
+  --bs-highlight-bg: var(--color-bg);
 }
 
 *,
@@ -109,7 +160,7 @@ body {
 body.thanks-page {
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
-    background-color: #d8b4ac !important; /* Overrides the default Bootstrap bg */
+    background-color: var(--color-bg) !important; /* Overrides the default Bootstrap bg */
 }
 
 body.thanks-page.fade-in {
@@ -130,6 +181,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
+  
 }
 
 h1, .h1 {
@@ -604,7 +656,7 @@ progress {
   margin-top: -1rem;
   margin-bottom: 1rem;
   font-size: 0.875em;
-  color: #6c757d;
+  color: var(--color-text-light);
 }
 .blockquote-footer::before {
   content: "— ";
@@ -2266,8 +2318,8 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(26, 188, 156, 0.25);
 }
 .form-check-input:checked {
-  background-color: #C3ACD0;
-  border-color: #C3ACD0;
+  background-color: var(--color-accent-light);
+  border-color: var(--color-accent-light);
 }
 .form-check-input:checked[type=checkbox] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
@@ -2276,8 +2328,8 @@ textarea.form-control-lg {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
 .form-check-input[type=checkbox]:indeterminate {
-  background-color: #C3ACD0;
-  border-color: #C3ACD0;
+  background-color: var(--color-accent-light);
+  border-color: var(--color-accent-light);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 .form-check-input:disabled {
@@ -2363,7 +2415,7 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #C3ACD0;
+  background-color: var(--color-accent-light);
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2392,7 +2444,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #C3ACD0;
+  background-color: var(--color-accent-light);
   border: 0;
   border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2460,7 +2512,7 @@ textarea.form-control-lg {
 }
 .form-floating > .form-control,
 .form-floating > .form-control-plaintext {
-  padding: 1.5rem 0;
+  /* padding: 1.5rem 0; */
 }
 .form-floating > .form-control::-moz-placeholder, .form-floating > .form-control-plaintext::-moz-placeholder {
   color: transparent;
@@ -2477,7 +2529,7 @@ textarea.form-control-lg {
 .form-floating > .form-control-plaintext:focus,
 .form-floating > .form-control-plaintext:not(:placeholder-shown) {
   padding-top: 2.5rem;
-  padding-bottom: 1.5rem;
+  /* padding-bottom: 1.5rem; */
 }
 .form-floating > .form-control:-webkit-autofill,
 .form-floating > .form-control-plaintext:-webkit-autofill {
@@ -2785,12 +2837,12 @@ textarea.form-control-lg {
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
-  --bs-btn-color: #85586F;
+  --bs-btn-color: var(--color-accent);
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 0.125rem;
   --bs-btn-border-color: transparent;
   --bs-btn-border-radius: 0.5rem;
-  --bs-btn-hover-border-color: #fff;
+  --bs-btn-hover-border-color: var(--color-border);
   --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   --bs-btn-disabled-opacity: 0.65;
   --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
@@ -2819,24 +2871,24 @@ textarea.form-control-lg {
   }
 }
 .btn:hover {
-  color: var(--bs-btn-hover-color);
+  color: var(--color-text-light);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
 .btn-check + .btn:hover {
-  color: var(--bs-btn-color);
-  background-color: var(--bs-btn-bg);
-  border-color: var(--bs-btn-border-color);
+  color: var(--color-text-light);
+  background-color: var(--color-accent-light);
+  border-color: var(--color-border);
 }
 .btn:focus-visible {
-  color: var(--bs-btn-hover-color);
-  background-color: var(--bs-btn-hover-bg);
-  border-color: var(--bs-btn-hover-border-color);
+  color: var(--color-text-light);
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-border);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
 .btn-check:focus-visible + .btn {
-  border-color: var(--bs-btn-hover-border-color);
+  border-color: var(--color-border);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
@@ -2857,20 +2909,20 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #AC7D88;
-  --bs-btn-border-color: #AC7D88;
+  --bs-btn-color: var(--color-text-light);
+  --bs-btn-bg: var(--color-accent);
+  --bs-btn-border-color: var(--color-border);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #bf8e99;
-  --bs-btn-hover-border-color: #AC7D88;
+  --bs-btn-hover-bg: var(--color-accent-light);
+  --bs-btn-hover-border-color: var(--color-border);
   --bs-btn-focus-shadow-rgb: 60, 198, 171;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #DEB6AB;
-  --bs-btn-active-border-color: #DEB6AB;
+  --bs-btn-active-color: var(--color-text-light);
+  --bs-btn-active-bg: var(--color-bg);
+  --bs-btn-active-border-color: var(var(--color-border))
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #baa2ae;
-  --bs-btn-disabled-border-color: #baa2ae;
+  --bs-btn-disabled-bg: .var(--color-text-muted);
+  --bs-btn-disabled-border-color: var(--color-border);
 }
 
 .btn-secondary {
@@ -2993,19 +3045,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary {
-  --bs-btn-color: #C3ACD0;
-  --bs-btn-border-color: #C3ACD0;
+  --bs-btn-color: var(--color-accent-light);
+  --bs-btn-border-color: var(--color-accent-light);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #C3ACD0;
-  --bs-btn-hover-border-color: #C3ACD0;
+  --bs-btn-hover-bg: var(--color-accent-light);
+  --bs-btn-hover-border-color: var(--color-accent-light);
   --bs-btn-focus-shadow-rgb: 26, 188, 156;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #C3ACD0;
-  --bs-btn-active-border-color: #C3ACD0;
+  --bs-btn-active-bg: var(--color-accent-dark);
+  --bs-btn-active-border-color: var(--color-accent-dark);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #C3ACD0;
+  --bs-btn-disabled-color: var(--color-text-muted);
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #C3ACD0;
+  --bs-btn-disabled-border-color: var(--color-text-muted);
   --bs-gradient: none;
 }
 
@@ -3695,8 +3747,8 @@ textarea.form-control-lg {
 
 .nav-pills {
   --bs-nav-pills-border-radius: 0.5rem;
-  --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #DEB6AB;
+  --bs-nav-pills-link-active-color: var(--color-text-light);
+  --bs-nav-pills-link-active-bg: var(--color-accent);
 }
 .nav-pills .nav-link {
   background: none;
@@ -6709,17 +6761,17 @@ textarea.form-control-lg {
 }
 
 .link-primary {
-  color: #C3ACD0 !important;
+  color: var(--color-accent-dark) !important;
 }
 .link-primary:hover, .link-primary:focus {
-  color: #15967d !important;
+  color: var(--color-accent) !important;
 }
 
 .link-secondary {
-  color: #2c3e50 !important;
+  color: var(--color-accent-dark) !important;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #233240 !important;
+  color: var(--color-accent) !important;
 }
 
 .link-success {
@@ -8141,14 +8193,20 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgb(222, 182, 171) !important;
+  background-color: #F5F7FC !important;
   /* background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important; */
   /* background-color: rgb(red, green, blue) !important; */
 }
 
+.bg-navbar {
+  --bs-bg-opacity: 1;
+    background-color: var(--color-surface-dark) !important;
+   /* background-color: rgba(var(--bs-navbar-rgb), var(--bs-bg-opacity)) !important; */
+}
+
 .bg-secondary {
   --bs-bg-opacity: 1;
-    background-color: rgb(133, 88, 111) !important;
+    background-color: #2A3142 !important;
   /* background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important; */
 }
 
@@ -10873,9 +10931,9 @@ html {
   width: 100%;
   max-width: 7rem;
   height: 0.25rem;
-  background-color: #AC7D88;
+  background-color: var(--color-accent-light);
   border-radius: 1rem;
-  border-color: #AC7D88;
+  border-color: var(--color-accent-light);
 }
 .divider-custom .divider-custom-line:first-child {
   margin-right: 1rem;
@@ -10884,14 +10942,14 @@ html {
   margin-left: 1rem;
 }
 .divider-custom .divider-custom-icon {
-  color: #AC7D88;
+  color: var(--color-accent-light);
   font-size: 2rem;
 }
 .divider-custom.divider-light .divider-custom-line {
-  background-color: #fff;
+  background-color: var(--color-accent-light);
 }
 .divider-custom.divider-light .divider-custom-icon {
-  color: #fff;
+  color: var(--color-accent-light);
 }
 
 .btn-xl {
@@ -10916,22 +10974,24 @@ html {
   font-weight: 700;
 }
 #mainNav .navbar-brand {
-  color: #fff;
+  color: var(--color-text-light);
 }
 #mainNav .navbar-nav {
   margin-top: 1rem;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link {
-  color: #fff;
+  color: var(--color-text-light);
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #DEB6AB;
+  color: var(--color-accent-light);
+  border-bottom: 2px solid var(--color-accent);
+  border-radius: 0 0 0 0;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
-  color: #fff;
+  color: var(--color-text-light);
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #DEB6AB;
+  color: var(--color-accent-light);
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -10953,7 +11013,7 @@ html {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #C3ACD0;
+    background: var(--color-accent-light);
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
@@ -10990,7 +11050,7 @@ html {
   padding-bottom: 6rem;
 }
 .masthead .masthead-heading {
-  /* color: #C3ACD0 !important; */
+  color: var(--color-accent) !important; 
   font-size: 2.75rem;
   line-height: 2.75rem;
 }
@@ -10999,6 +11059,10 @@ html {
 }
 .masthead .masthead-avatar {
   width: 15rem;
+}
+
+#my-roles.masthead-subheading {
+  color: var(--color-text) !important;
 }
 
 @media (min-width: 992px) {
@@ -11018,13 +11082,19 @@ html {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #85586F;
-  color: #fff;
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-light);
 }
 
 .copyright {
-  background-color: #61394d;
+  background-color: var(--color-surface-dark-2);
 }
+
+#resume p {
+  color: var(--color-text-light);
+}
+
+
 
 ul.timeline {
   list-style-type: none;
@@ -11032,7 +11102,7 @@ ul.timeline {
 }
 ul.timeline:before {
   content: ' ';
-  background: #85586F;
+  background: var(--color-accent-dark);
   display: inline-block;
   position: absolute;
   left: 29px;
@@ -11046,11 +11116,11 @@ ul.timeline > li {
 }
 ul.timeline > li:before {
   content: ' ';
-  background: #DEB6AB;
+  background: var(--color-accent-light);
   display: inline-block;
   position: absolute;
   border-radius: 50%;
-  border: 3px solid #85586F;
+  border: 3px solid var(--color-accent-dark);
   left: 20px;
   width: 20px;
   height: 20px;
@@ -11069,25 +11139,38 @@ ul.timeline > li:before {
   font-family: var(--bs-font-monospace);
 }
 
+#resume li {
+  color: var(--color-text-light) !important;
+}
+
+#resume h3 {
+  color: var(--color-accent-light) !important;
+}
+
 .full-name {
   font-weight: 600;
 }
 
 #about strong {
-    color: #fff; /* Or a secondary color like yellow if you want it to pop */
+    color: var(--color-accent-dark); /* Or a secondary color like yellow if you want it to pop */
     text-decoration: underline rgba(255,255,255,0.3); /* Subtle underline for emphasis */
+    font-weight: 800;
+}
+
+#about p {
+  color: var(--color-text);
 }
 
 /* Table Axis Alignment */
 .custom-axis-table td, .custom-axis-table th {
-    border-color: rgba(255, 255, 255, 0.3) !important;
+    border-color: var(--color-text-muted) !important;
 }
 
 /* Make the button stand out */
 .btn-primary-custom {
-    background-color: #ffffff;
-    color: #cc9c94; /* Match this to your pink background hex code */
-    border: 2px solid #ffffff;
+    background-color: var(--color-surface);
+    color: var(--color-accent); /* Match this to your pink background hex code */
+    border: 2px solid var(--color-accent);
     padding: 1.25rem 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -11098,8 +11181,8 @@ ul.timeline > li:before {
 }
 
 .btn-primary-custom:hover {
-    background-color: transparent;
-    color: #ffffff;
+    background-color: var(--color-accent-light);
+    color: var(--color-surface);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
@@ -11112,7 +11195,7 @@ ul.timeline > li:before {
 
 /* Container Background to match your Blush/Rose theme */
 #contact {
-    background-color: #d8b4ac !important; /* Adjust to your exact hex */
+    background-color: var(--color-surface) !important; /* Adjust to your exact hex */
 }
 
 /* Remove default box styling and add bottom-only borders */
@@ -11121,7 +11204,7 @@ ul.timeline > li:before {
     border: none !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6) !important;
     border-radius: 0 !important;
-    color: white !important;
+    color: var(--color-text) !important;
     padding-left: 0 !important;
     font-weight: 300;
 }
@@ -11129,31 +11212,31 @@ ul.timeline > li:before {
 /* Focus state: brighten the bottom border */
 .custom-input:focus {
     box-shadow: none !important;
-    border-bottom: 1px solid white !important;
+    border-bottom: 1px solid var(--color-accent) !important;
 }
 
 /* Label styling */
 .custom-form-group label {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: var(--color-text) !important;
     padding-left: 0 !important;
 }
 
 /* Custom Submit Button: Minimalist High-Fashion Style */
 .custom-submit-btn {
-    border: 1px solid white !important;
+    border: 1px solid var(--color-accent) !important;
     background: transparent !important;
-    color: white !important;
+    color: var(--color-accent) !important;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.85rem;
     padding: 15px 40px;
     transition: all 0.3s ease;
-    border-radius: 0 !important; /* Sharp corners for modern look */
+    border-radius: 20px !important; /* Rounded corners for modern look */
 }
 
 .custom-submit-btn:hover {
-    background: white !important;
-    color: #d8b4ac !important; /* Text turns the color of your background */
+    background: var(--color-accent-dark) !important;
+    color: var(--color-surface-dark) !important; /* Text turns the color of your background */
 }
 
 /* Force transparency on focus and active states */
@@ -11165,7 +11248,7 @@ ul.timeline > li:before {
     background: transparent !important;
     outline: none !important;
     box-shadow: none !important;
-    color: white !important;
+    color: var(--color-text) !important;
 }
 
 /* This specifically targets the "Beige" transition in Chrome */
@@ -11175,8 +11258,8 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #d8b4ac inset !important; /* Matches your background color exactly */
-    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-accent-light) inset !important; /* Matches your background color exactly */
+    -webkit-text-fill-color: var(--color-text) !important;
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -11195,9 +11278,9 @@ textarea:-webkit-autofill:focus {
 .custom-submit-btn {
     position: relative;
     overflow: hidden;
-    border: 1px solid white !important;
+    border: 1px solid var(--color-accent) !important;
     background: transparent !important;
-    color: white !important;
+    color: var(--color-accent) !important;
     font-weight: 400; 
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -11214,16 +11297,17 @@ textarea:-webkit-autofill:focus {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: white;
+    background: var(--color-surface);
     transition: left 0.4s cubic-bezier(0.7, 0, 0.3, 1);
     z-index: -1;
 }
 
 /* Hover State */
 .custom-submit-btn:hover {
-    color: #d8b4ac !important; /* Flip to your theme color */
+    color: var(--color-accent-dark) !important; /* Flip to your theme color */
     font-weight: 700 !important; /* Make text BOLD */
     letter-spacing: 1.2px; 
+    background-color: var(--color-accent) !important;
 }
 
 .custom-submit-btn:hover::before {
@@ -11232,7 +11316,7 @@ textarea:-webkit-autofill:focus {
 
 .form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label {
-    color: white !important;
+    color: var(--color-text)!important;
     opacity: 0.8;
 }
 
@@ -11388,6 +11472,7 @@ textarea:-webkit-autofill:focus {
   section.portfolio .portfolio-item {
   position: relative !important;
   overflow: hidden !important;
+  border-radius: 20px !important;
   }
 
   /* 2. THE CUSTOM FROSTED GLASS OVERLAY */
@@ -11502,7 +11587,7 @@ textarea:-webkit-autofill:focus {
     font-weight: 700 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.08em !important; /* Classic editorial tracked-out look */
-    color: #b0818c !important; /* Soft mauve accent color */
+    color: var(--color-accent) !important; /* Soft mauve accent color */
     
     /* Spacing around the heading */
     margin-top: 2.5rem !important; /* Pushes previous section away */
@@ -11521,7 +11606,7 @@ textarea:-webkit-autofill:focus {
     font-size: 1rem !important; /* Ideal body size for screens */
     line-height: 1.8 !important; /* Gives lines breathing room */
     letter-spacing: 0.015em !important; /* Subtle space between letters */
-    color: #4A4A4A !important; /* Softer than pure black to reduce eye strain */
+    color: var(--color-text) !important; /* Softer than pure black to reduce eye strain */
 }
 
 /* 3. Bold Accents (e.g., Cognitive Overload:) */
@@ -11892,7 +11977,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .portfolio-modal p {
-	color: #555;
+	color: var(--color-text);
 	line-height: 1.7;
 }
 
@@ -11947,7 +12032,7 @@ h4 {
 }
 
 p {
-	color: #555;
+	color: var(--color-text-light);
 	line-height: 1.8;
 	max-width: 600px;
 }
