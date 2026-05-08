@@ -17,7 +17,7 @@
 	
 	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body onload="typeWriter();">
+<body onload="typeWriter();" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100" tabindex="0">
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg bg-navbar text-uppercase fixed-top" id="mainNav">
 		<div class="container">
@@ -93,6 +93,7 @@
 					<a class="nav-link" id="pills-video-tab" data-bs-toggle="pill" data-bs-target="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">Video Edit</a>
 				</li>
 			</ul>
+
 			<div class="tab-content" id="pills-tabContent">
 
 				<!-- UI / UX DESIGN SECTION -->
@@ -927,65 +928,60 @@
 			<!-- About Section Content-->
 			<div class="row gx-5 mb-5">
 				<div class="col-lg-5 ms-auto">
-					<p class="lead mb-4" style="line-height: 1.8; text-align: justify;">
+					<p class="lead mb-4">
 						I am a <strong>Systems Architect and Creative Designer</strong> with a 15-year foundation in ICT and application development & support. My career has been defined by transforming complex, fragmented processes into seamless digital environments.
 					</p>
-					<p class="lead" style="line-height: 1.8; text-align: justify;">
+					<p class="lead">
 						<strong>The Precision:</strong> My background in workflow automation and process optimization ensures that every system I build is robust, scalable, and engineered for high-level performance.
 					</p>
 				</div>
 
 				<div class="col-lg-5 me-auto">
-					<p class="lead mb-4" style="line-height: 1.8; text-align: justify;">
+					<p class="lead mb-4">
 						<strong>The Perspective:</strong> Over the years, I have integrated a minimalist user-centered design lens into my technical work. I bridge the gap between back-end logic and front-end aesthetics to ensure the interaction is as intuitive as the system is sound.
 					</p>
-					<p class="lead fst-italic" style="line-height: 1.8;">
+					<p class="lead about-quote">
 						Logic meets creativity. Process meets polish. Explore my work and let's create something extraordinary together.
 					</p>
 				</div>
 			</div>
 
-			<div class="row justify-content-center">
-				<div class="col-lg-8">
-					<div class="table-responsive">
-						<table class="table table-borderless custom-axis-table">
-							<thead>
-								<tr>
-									<th class="text-uppercase py-3 fw-bold tracking-wider text-end pe-4 border-end border-2">The Technical Side</th>
-									<th class="text-uppercase py-3 fw-bold tracking-wider text-start ps-4 border-start border-2">The Creative Side</th>
-								</tr>
-							</thead>
-							<tbody class="lead">
-								<tr>
-									<td class="py-3 text-end pe-4 border-end border-1 opacity-75">Workflow Automation</td>
-									<td class="py-3 text-start ps-4 border-start border-1 opacity-75">UI/UX Design</td>
-								</tr>
-								<tr>
-									<td class="py-3 text-end pe-4 border-end border-1 opacity-75">Business Process Optimization</td>
-									<td class="py-3 text-start ps-4 border-start border-1 opacity-75">Brand Identity & Typography</td>
-								</tr>
-								<tr>
-									<td class="py-3 text-end pe-4 border-end border-1 opacity-75">Application Flow Development</td>
-									<td class="py-3 text-start ps-4 border-start border-1 opacity-75">Video Editing & Motion Graphics</td>
-								</tr>
-								<tr>
-									<td class="py-3 text-end pe-4 border-end border-1 opacity-75">System Architecture</td>
-									<td class="py-3 text-start ps-4 border-start border-1 opacity-75">Minimalist Aesthetic</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+			<div class="skills-showcase mb-5">
+
+				<!-- Technical Card -->
+				<div class="glass-card">
+					<h3>The Technical Side</h3>
+
+					<ul>
+						<li>Workflow Automation</li>
+						<li>Business Process Optimization</li>
+						<li>Application Flow Development</li>
+						<li>System Architecture</li>
+					</ul>
 				</div>
+
+				<!-- Creative Card -->
+				<div class="glass-card">
+					<h3>The Creative Side</h3>
+
+					<ul>
+						<li>UI/UX Design</li>
+						<li>Brand Identity & Typography</li>
+						<li>Video Editing & Motion Graphics</li>
+						<li>Minimalist Aesthetic</li>
+					</ul>
+				</div>
+
 			</div>
 
 			<!-- About Section Button-->
-			<div class="text-center mt-5">
+			<div class="about-btn-container text-center">
 				<a class="btn btn-xl btn-primary-custom" href="https://www.facebook.com/carl.gimenez0716" target="_blank">
 					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-right-quote me-2" viewBox="0 0 16 16">
 						<path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
 						<path d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
 					</svg>
-					Let's Talk.
+					Let's Work Together.
 				</a>
 			</div>
 		</div>
@@ -1003,9 +999,21 @@
 				<div class="divider-custom-line"></div>
 			</div>
 			
+			<div class="resume-actions text-center mt-4">
+				
+				<a href="assets/Ian Carl Gimenez Q2-2026 ATS-friendly.pdf" target="_blank"
+					class="resume-download-btn"
+					download>
+
+					<i class="fas fa-download me-2"></i>
+					Download CV
+				</a>
+			</div>
+
 			<!-- Resume Section Content -->
 			
 			<div class="row">
+				
 				<!-- Summary and Education Content -->
 				<div class="col-md-6">
 					<h3 class="resume-title">Summary</h3>    
@@ -1014,10 +1022,8 @@
 							<span class="full-name text-uppercase">Ian Carl Gimenez</span>
 							<br>
 							<div class="resume-intro mt-3">
-								<p>Multi-disciplinary professional with over 10 years of experience across telephony operations, application support, and workflow automation, combined with a strong background in graphic design, video editing, and branding. Skilled in developing efficient systems and creating visually compelling content that aligns with business goals. Experienced in building automation solutions using tools such as Google AppSheet and Apps Script to streamline processes and improve productivity.</p> 
-							
-								<p>Currently expanding into UI/UX design, with a growing focus on creating intuitive and user-centered digital experiences that bridge functionality and visual design.</p>
-
+								<p>Creative technologist specializing in UI/UX design, workflow automation, branding, motion design, and digital experiences. With 10+ years of experience across IT systems and digital design, I create solutions that are not only visually compelling, but also functional, scalable, and user-focused.</p> 
+														
 							</div>
 							<ul class="mt-4">
 								<li>Las Pinas, Metro Manila Philippines, 1746</li>
@@ -1026,23 +1032,57 @@
 							</ul>
 						</li>
 					</ul>
+
+					<div class="resume-skills-wrapper">
+
+						<div class="resume-skill-group">
+							<h3>Core Skills</h3>
+
+							<div class="skill-tags">
+							<span class="skill-tag">UI/UX Design</span>
+							<span class="skill-tag">Workflow Automation</span>
+							<span class="skill-tag">System Architecture</span>
+							<span class="skill-tag">Low-Code Development</span>
+							<span class="skill-tag">Branding & Visual Design</span>
+							<span class="skill-tag">Video Editing</span>
+							<span class="skill-tag">Application Support</span>
+							<span class="skill-tag">Process Optimization</span>
+							</div>
+						</div>
+
+						<div class="resume-skill-group mt-5">
+							<h3>Tools</h3>
+
+							<div class="skill-tags">
+							<span class="skill-tag">Figma</span>
+							<span class="skill-tag">Adobe Creative Suite</span>
+							<span class="skill-tag">Whimsical</span>
+							<span class="skill-tag">Canva</span>
+							<span class="skill-tag">AppSheet</span>
+							<span class="skill-tag">Google Apps Script</span>
+							<span class="skill-tag">Power Platform</span>
+							<span class="skill-tag">HTML/CSS</span>
+							</div>
+						</div>
+
+					</div>
 					
 					<h3 class="resume-title">Education</h3>
 					<ul class="timeline">
 						<li>
-							<p class="resume-course text-uppercase">Full Stack Web Development</p>
+							<p class="resume-course">Full Stack Web Development</p>
 							<p class="resume-duration float-end">Oct 2018 - Mar 2019</p>
 							<p class="resume-school-name">Zuitt Philippines</p>
 						</li>
 						
 						<li>
-							<p class="resume-course text-uppercase">Professional Certificate in Advance Graphic Design</p>
+							<p class="resume-course">Professional Certificate in Advance Graphic Design</p>
 							<p class="resume-duration float-end">Dec 2013 - Dec 2014</p>
 							<p class="resume-school-name">Sessions College</p>
 						</li>
 						
 						<li>
-							<p class="resume-course text-uppercase">Bachelor of Science in Computer Science</p>
+							<p class="resume-course">Bachelor of Science in Computer Science</p>
 							<p class="resume-duration float-end">Jun 2004 - Apr 2008</p>
 							<p class="resume-school-name">STI College Fairview</p>
 						</li>
@@ -1055,30 +1095,32 @@
 					<ul class="timeline">
 						<li>
 							<p class="resume-job-role text-uppercase">Digital Workplace Officer</p>
-							<p class="resume-duration float-end">Nov 2024 to Mar 2026</p>
+							<p class="resume-duration float-end">Nov 2024 – Mar 2026</p>
 							<p class="resume-company-name">UBX</p>
 							<ul>
-								<li>Architected low-code business ecosystems using Google AppSheet and Microsoft Power Platform, resulting in significant gains in operational throughput and data integrity.</li>
-								<li>Engineered sophisticated automation logic via Google Apps Script and AppSheet bots to facilitate real-time governance, data synchronization, and cross-departmental approvals.</li>
-								<li>Designed and deployed bespoke end-to-end workflow systems for Asset Management and Contract Lifecycles, integrating complex Google Sheets backends with intuitive UI.</li>
-								<li>Championed user adoption through technical mentorship and the implementation of rigorous access control and security compliance protocols.</li>
+								<li>Designed and developed user-facing low-code applications using Google AppSheet, GoogleApps Script, Google Looker Studio, Power Platform tools (Power Apps, Power Automate), and SharePoint.</li>
+								<li>Automated internal workflows with real-time notifications and approval systems.</li>
+								<li>Conducted user training and provided technical support to enhance tool adoption.</li>
+								<li>Implemented access control and governance practices to ensure data security and compliance.</li>
+								<li>Built systems for timesheet tracking, contract lifecycle management and asset/inventory management.</li>
 							</ul>
 						</li>
 
 						<li>
 							<p class="resume-job-role text-uppercase">Infrastructure Engineer / Service Delivery Lead</p>
-							<p class="resume-duration float-end">Jul 2016 to Aug 2024</p>
+							<p class="resume-duration float-end">Jul 2016 – Aug 2024</p>
 							<p class="resume-company-name">Indra Sistemas S.A.</p>
 							<ul>
-								<li>Steered the end-to-end lifecycle of infrastructure projects, from technical feasibility assessments to high-level application architecture and incident management.</li>
-								<li>Directed cross-functional technical teams, delegating complex architectural tasks and providing high-level counsel on system scalability.</li>
-								<li>Optimized contact center operations by auditing project requirements and overseeing rigorous UAT (User Acceptance Testing) cycles for new applications.</li>
+								<li>Led cross-functional teams to improve service workflow predictability and delivery consistency.</li>
+								<li>Managed and monitored telephony operations for enterprise systems.</li>
+								<li>Drove continuous improvement initiatives to optimize resource allocation and reduce operational costs.</li>
+								<li>Collaborated with stakeholders and cross-functional teams to enhance service processes and performance.</li>
 							</ul>
 						</li>
 
 						<li>
 							<p class="resume-job-role text-uppercase">Freelance Creative Specialist & UI/UX Designer</p>
-							<p class="resume-duration float-end">Jan 2016 to Present</p>
+							<p class="resume-duration float-end">Jan 2016 – Present</p>
 							<p class="resume-company-name">Self-Employed</p>
 							<ul>
 								<li>Translates complex brand identities into minimalist visual assets, including high-fidelity UI designs, logos, and digital marketing systems.</li>
@@ -1088,22 +1130,24 @@
 
 						<li>
 							<p class="resume-job-role text-uppercase">Field Applications Engineer</p>
-							<p class="resume-duration float-end">Oct 2013 to May 2016</p>
+							<p class="resume-duration float-end">Oct 2013 – May 2016</p>
 							<p class="resume-company-name">VTechnologist Pte. Ltd. Singapore</p>
 							<ul>
-								<li>Managed on-site technical deployments for enterprise clients, overseeing the installation, configuration, and structural maintenance of complex product ecosystems.</li>
-								<li>Delivered high-impact technical workshops and hands-on training for 3rd-party integrations (Avaya, NICE), bridging the gap between technical complexity and user proficiency.</li>
+								<li>Delivered enterprise-grade technical support for third-party applications, including installation, configuration, and integration.</li>
+								<li>Troubleshot complex system issues through log analysis and root cause investigation.</li>
+								<li>Acted as a liaison between clients and vendors for issue resolution and technical coordination</li>
 							</ul>
 						</li>
 
 						<li>
 							<p class="resume-job-role text-uppercase">Field Applications Engineer</p>
-							<p class="resume-duration float-end">Jul 2004 to Sep 2013</p>
+							<p class="resume-duration float-end">Jul 2004 – Sep 2013</p>
 							<p class="resume-company-name">DTSI Group</p>
 							<ul>
-								<li>Integrated 3rd-party Avaya applications into existing client infrastructures, ensuring seamless data flow and system interoperability.</li>
-								<li>Diagnosed and resolved critical system bottlenecks through remote and on-site troubleshooting, maintaining 99.9% application uptime for key accounts.</li>
-								<li>Custom-developed workflow applications tailored to client-specific requirements, optimizing their operational performance through technical innovation.</li>
+								<li>Supported deployment and integration of enterprise applications across client environments.</li>
+								<li>Performed system troubleshooting, performance monitoring, and issue resolution.</li>
+								<li>Assisted in solution validation, proof of concept (POC), and technical demonstrations.</li>
+								<li>Contributed to pre-sales and post-sales technical support activities.</li>
 							</ul>
 						</li>
 					</ul>
@@ -1114,7 +1158,7 @@
 	</section>
 	
 	<!-- Contact Section -->
-	<section class="page-section" id="contact">
+	<section class="page-section bg-primary" id="contact">
 		<div class="container">
 			<!-- Contact Section Heading-->
 			<h2 class="page-section-heading text-center text-uppercase text-primary text-secondary mb-0">Contact Me</h2>
@@ -1134,36 +1178,39 @@
 					<!-- To make this form functional, sign up at-->
 					<!-- https://startbootstrap.com/solution/contact-forms-->
 					<!-- to get an API token!-->
-					<form id="contactForm" action="https://formspree.io/f/xykbknne" method="POST">
+					
+					<div class="contact-panel">
+						<form id="contactForm" action="https://formspree.io/f/xykbknne" method="POST">
 
-						<input type="hidden" name="_subject" value="New Portfolio Inquiry: Systems & Design">
-    					<input type="hidden" name="_next" value="https://iancarl0716.github.io/iancarlgimenez/thanks.html">
-    					<input type="hidden" name="_captcha" value="false">
-    
-						<div class="form-floating mb-4 custom-form-group">
-							<input class="form-control custom-input" name="name" id="name" type="text" placeholder="Full Name" autocomplete="off" required>
-							<label for="name">Full name</label>
-						</div>
+							<input type="hidden" name="_subject" value="New Portfolio Inquiry: Systems & Design">
+							<input type="hidden" name="_next" value="https://iancarl0716.github.io/iancarlgimenez/thanks.html">
+							<input type="hidden" name="_captcha" value="false">
+		
+							<div class="form-floating mb-4 custom-form-group">
+								<input class="form-control custom-input" name="name" id="name" type="text" placeholder="Full Name" autocomplete="off" required>
+								<label for="name">Full name</label>
+							</div>
 
-						<div class="form-floating mb-4 custom-form-group">
-							<input class="form-control custom-input" name="email" id="email" type="email" placeholder="Email" autocomplete="off" required>
-							<label for="email">Email address</label>
-						</div>
+							<div class="form-floating mb-4 custom-form-group">
+								<input class="form-control custom-input" name="email" id="email" type="email" placeholder="Email" autocomplete="off" required>
+								<label for="email">Email address</label>
+							</div>
 
-						<div class="form-floating mb-4 custom-form-group">
-							<input class="form-control custom-input" name="phone" id="phone" type="tel" placeholder="Phone">
-							<label for="phone">Phone number</label>
-						</div>
+							<div class="form-floating mb-4 custom-form-group">
+								<input class="form-control custom-input" name="phone" id="phone" type="tel" placeholder="Phone">
+								<label for="phone">Phone number</label>
+							</div>
 
-						<div class="form-floating mb-4 custom-form-group">
-							<textarea class="form-control custom-input" name="message" id="message" placeholder="Message" style="height: 8rem" autocomplete="off" required></textarea>
-							<label for="message">Message</label>
-						</div>
+							<div class="form-floating mb-4 custom-form-group">
+								<textarea class="form-control custom-input" name="message" id="message" placeholder="Message" style="height: 8rem" autocomplete="off" required></textarea>
+								<label for="message">Message</label>
+							</div>
 
-						<div class="text-start">
-							<button class="btn btn-outline-light btn-xl custom-submit-btn mt-5" id="submitButton" type="submit">Send Message</button>
-						</div>
-					</form>
+							<div class="text-start floating-button text-center">
+								<button class="btn btn-outline-light btn-xl custom-submit-btn mt-5" id="submitButton" type="submit">Send Message</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1874,7 +1921,7 @@
 
 										</div>
 
-										<h6 class="text-uppercase text-muted mb-3">Key Pain Points</h6>
+										<h6 class="text-uppercase mb-3">Key Pain Points</h6>
 										<ul class="fa-ul mb-4" style="padding-left: 1.5rem; text-align: left;">
 											<li class="mb-2"><span class="fa-li"><i class="fa-solid fa-hand-point-right" style="color: var(--color-accent)"></i></span><strong>Fragmented entry and discovery:</strong> Users must move between Instagram and an external form, breaking the flow before the booking process even begins.</li>
 											<li class="mb-2"><span class="fa-li"><i class="fa-solid fa-hand-point-right" style="color: var(--color-accent)"></i></span><strong>Cognitive overload from long class lists:</strong> The Google Form presents all classes in a single, text-heavy checklist, making it difficult to scan, compare, or decide efficiently.</li>
@@ -1887,7 +1934,7 @@
 										<!-- Problem Statements -->
 										<div class="problem-section mt-4">
 
-											<h6 class="text-uppercase text-muted mb-3">Problem Statements</h6>
+											<h6 class="text-uppercase mb-3">Problem Statements</h6>
 
 											<div class="problem-grid">
 
@@ -1930,7 +1977,7 @@
 										 <!-- ===================== BLOCK 1 ===================== -->
 										<div class="logic-block mb-4">
 
-											<h5 class="logic-label text-muted mb-1">Discovery & Access</h5>
+											<h5 class="logic-label mb-1">Discovery & Access</h5>
 
 											
 											<p class="logic-sub-label">Problem</p>
@@ -1955,7 +2002,7 @@
 										<!-- ===================== BLOCK 2 ===================== -->
 										<div class="logic-block mb-4">
 
-											<h5 class="logic-label text-muted mb-1">Cognitive Overload</h5>
+											<h5 class="logic-label mb-1">Cognitive Overload</h5>
 
 											
 											<p class="logic-sub-label">Problem</p>
@@ -1980,7 +2027,7 @@
 										<!-- ===================== BLOCK 3 ===================== -->
 										<div class="logic-block mb-4">
 
-											<h5 class="logic-label text-muted mb-1">Filtering & Relevance</h5>
+											<h5 class="logic-label mb-1">Filtering & Relevance</h5>
 
 											<p class="logic-sub-label">Problem</p>
 											<p class="mb-2">
@@ -2004,7 +2051,7 @@
 										<!-- ===================== BLOCK 4 ===================== -->
 										<div class="logic-block mb-4">
 
-											<h5 class="logic-label text-muted mb-1">Information Clarity</h5>
+											<h5 class="logic-label mb-1">Information Clarity</h5>
 
 											<p class="logic-sub-label">Problem</p>
 											<p class="mb-2">
@@ -2028,7 +2075,7 @@
 										<!-- ===================== BLOCK 5 ===================== -->
 										<div class="logic-block mb-4">
 
-											<h5 class="logic-label text-muted mb-1">Guided Booking Flow</h5>
+											<h5 class="logic-label mb-1">Guided Booking Flow</h5>
 
 											<p class="logic-sub-label">Problem</p>											
 											<p class="mb-2">
@@ -2052,7 +2099,7 @@
 										<!-- ===================== BLOCK 6 ===================== -->
 										<div class="logic-block mb-4">
 
-											<h5 class="logic-label text-muted mb-1">Payment Confidence</h5>
+											<h5 class="logic-label mb-1">Payment Confidence</h5>
 											
 											<p class="logic-sub-label">Problem</p>
 											<p class="mb-2">
@@ -2086,7 +2133,7 @@
 
 										<!-- SECTION 1 -->
 										<div class="polish-block mb-5">
-											<h5 class="polish-heading text-muted">Visual System & Hierarchy</h5>
+											<h5 class="polish-heading">Visual System & Hierarchy</h5>
 
 											<p class="polish-desc">
 											A consistent visual system was established using a clear typography scale, structured spacing, and a restrained color palette to improve readability and hierarchy.
@@ -2127,7 +2174,7 @@
  
 										<!-- SECTION 2 -->
 										<div class="polish-block mb-5">
-											<h5 class="polish-heading text-muted">Scannability & Content Structure</h5>
+											<h5 class="polish-heading">Scannability & Content Structure</h5>
 
 											<p class="polish-desc">
 											Class information was structured into digestible cards, allowing users to quickly compare options based on instructor, level, and schedule.
@@ -2141,7 +2188,7 @@
 
 										<!-- SECTION 3 -->
 										<div class="polish-block mb-5">
-											<h5 class="polish-heading text-muted">Component Consistency</h5>
+											<h5 class="polish-heading">Component Consistency</h5>
 
 											<p class="polish-desc">
 											Reusable components such as buttons, chips, and cards were standardized to ensure consistency across all screens and interactions.
@@ -2155,7 +2202,7 @@
 
 										<!-- SECTION 4 -->
 										<div class="polish-block mb-5">
-											<h5 class="polish-heading text-muted">Interaction & Feedback</h5>
+											<h5 class="polish-heading">Interaction & Feedback</h5>
 
 											<p class="polish-desc">
 											Clear interaction states and feedback mechanisms were introduced to guide users through each step of the booking process with confidence.
@@ -2170,7 +2217,7 @@
 
 										<!-- SECTION 5 -->
 										<div class="polish-block mb-5">
-											<h5 class="polish-heading text-muted">Guided Flow & Confidence</h5>
+											<h5 class="polish-heading">Guided Flow & Confidence</h5>
 
 											<p class="polish-desc">
 												The booking journey was streamlined into a clear step-by-step flow, reducing friction and increasing user trust through transparency and confirmation.
@@ -2272,7 +2319,7 @@
 
 										<!-- Before & After Comparison -->
 										<div class="result-block mb-4">
-											<h5 class="result-heading text-muted">Before vs After</h5>
+											<h5 class="result-heading">Before vs After</h5>
 
 											<div class="result-comparison">
 												<div class="result-column before">
@@ -2302,7 +2349,7 @@
 										<!-- Future Opportunities -->
 										<div class="result-block">
 
-											<h5 class="result-heading text-muted">Future Opportunities</h5>
+											<h5 class="result-heading">Future Opportunities</h5>
 
 											<ul class="result-list">
 												<li>Introduce real-time class availability and slot tracking</li>
