@@ -820,6 +820,13 @@ progress {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
+
+  .linkedin-post{
+
+        transform:scale(.92);
+        transform-origin:center top;
+
+  }
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
@@ -6117,18 +6124,18 @@ textarea.form-control-lg {
 }
 
 .carousel-control-prev {
-  left: 0;
+  left: 10px;
 }
 
 .carousel-control-next {
-  right: 0;
+  right: 10px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: 42px;
-  height: 42px;
+  width: 30px;
+  height: 30px;
   background-color: rgba(0,0,0,0.55);
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -12519,6 +12526,26 @@ section.portfolio .portfolio-item .custom-hover-caption {
   .result-comparison {
     grid-template-columns: 1fr;
   }
+
+  .carousel-control-prev,
+  .carousel-control-next{
+    display:none;
+  }
+
+  .custom-nav{
+      opacity:.7;
+      width:28px;
+      height:28px;
+      font-size:.8rem;
+  }
+
+  #TravelgofersCarousel .custom-nav{
+      opacity:.7;
+      width:28px;
+      height:28px;
+      font-size:.8rem;
+  }
+  
 }
 
 .result-block {
@@ -12930,7 +12957,7 @@ p {
 
 .carousel-control-prev,
 .carousel-control-next{
-    width: 8%;
+    width: auto;
 }
 
 .campaign-slide{
@@ -12951,6 +12978,197 @@ p {
     object-fit: contain;
     border-radius: 32px;
 }
+
+
+.linkedin-post{
+
+    width:100%;
+    max-width:580px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    padding:18px;
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+    cursor:pointer;
+}
+
+.linkedin-post:hover{
+
+    box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.12);
+}
+
+
+.linkedin-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.profile{
+
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+
+.profile img{
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+    object-fit:cover;
+}
+
+
+.linkedin-caption{
+
+    margin:15px 0;
+    color:#444;
+    line-height:1.5;
+}
+
+
+ .custom-nav{
+
+    width:32px;
+    height:32px;
+
+    background:rgba(255,255,255,.55);
+    backdrop-filter: blur(6px);
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#444;
+    font-size: .9rem;
+
+    opacity:0;
+    transition: .3s ease;
+}
+
+#OVOCarousel:hover .custom-nav{
+  opacity: 9;
+}
+
+#linkedinCarousel:hover .custom-nav{
+  opacity: 9;
+}
+
+#TravelgofersCarousel:hover .custom-nav{
+  opacity: 9;
+}
+
+#terraceCarousel:hover .custom-nav{
+  opacity: 9;
+}
+
+#flowCarousel:hover .custom-nav{
+  opacity: 9;
+} 
+
+#TravelgofersCarousel{
+  position: relative;
+}
+
+/* keep buttons constrained to image width */
+#TravelgofersCarousel .carousel-control-prev,
+#TravelgofersCarousel .carousel-control-next{
+    width:40px;
+}
+
+/* align arrows inside image */
+#TravelgofersCarousel .carousel-control-prev{
+    left:12px;
+}
+
+#TravelgofersCarousel .carousel-control-next{
+    right:12px;
+}
+
+.slide-count{
+
+  text-align:center;
+  margin:8px 0 10px;
+  color:#777;
+  font-size:.85rem;
+}
+
+
+.linkedin-actions{
+
+    margin-top:15px;
+
+    display:flex;
+    justify-content:space-around;
+
+    padding-top:15px;
+
+    border-top:1px solid #eee;
+}
+
+.reaction-summary{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 0 12px;
+  border-bottom:1px solid #ececec;
+  font-size:.9rem;
+  color:#666;
+}
+
+
+.reaction-left{
+
+    display:flex;
+    align-items:center;
+}
+
+
+.reaction-icon{
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-right:-6px;
+
+    color:white;
+
+    font-size:11px;
+}
+
+.reaction-icon:nth-child(1){
+
+    background:#0A66C2;
+}
+
+.reaction-icon:nth-child(2){
+
+    background:#F44336;
+}
+
+.reaction-count{
+
+    margin-left:12px;
+}
+
 
 /* Tablet */
 @media (max-width: 991px){

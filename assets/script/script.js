@@ -217,3 +217,91 @@ document.querySelectorAll('.portfolio-item[data-type="book-cover"]').forEach(el 
     el.closest('.col-md-6').style.display = 'none';
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const slider =
+    document.querySelector("#linkedinCarousel");
+
+    if(!slider) return;
+
+
+    const carousel =
+    bootstrap.Carousel.getOrCreateInstance(
+        slider
+    );
+
+    let startX = 0;
+
+
+    slider.addEventListener(
+        "touchstart",
+        e => {
+
+            startX =
+            e.touches[0].clientX;
+
+        }
+    );
+
+
+    slider.addEventListener(
+        "touchend",
+        e => {
+
+            let endX =
+            e.changedTouches[0].clientX;
+
+            let diff =
+            startX - endX;
+
+
+            if(diff > 50){
+
+                carousel.next();
+
+            }
+
+
+            if(diff < -50){
+
+                carousel.prev();
+
+            }
+
+        }
+    );
+
+});
+
+document.addEventListener("DOMContentLoaded", ()=>{
+
+    const carouselEl =
+    document.querySelector(
+    "#linkedinCarousel"
+    );
+
+    const counter =
+    document.querySelector(
+    ".slide-count"
+    );
+
+
+    if(
+        !carouselEl ||
+        !counter
+    ) return;
+
+
+    carouselEl.addEventListener(
+        "slid.bs.carousel",
+        function(e){
+
+            counter.innerHTML =
+            `${e.to + 1} / 5`;
+
+        }
+
+    );
+
+});
