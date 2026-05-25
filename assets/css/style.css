@@ -7013,6 +7013,17 @@ textarea.form-control-lg {
   height: 100%;
 }
 
+.ratio iframe {
+    border: 0;
+    border-radius: 1rem;
+}
+
+.portfolio-modal .ratio {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
 .ratio-1x1 {
   --bs-aspect-ratio: 100%;
 }
@@ -13251,6 +13262,7 @@ p {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--color-text-muted);
+    margin-top: 2rem;
     margin-bottom: 0.75rem;
     position: relative;
     padding-left: 14px;
