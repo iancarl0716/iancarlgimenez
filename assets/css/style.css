@@ -6184,6 +6184,7 @@ textarea.form-control-lg {
   margin-bottom: 1rem;
   margin-left: 15%;
   list-style: none;
+  gap: 10px;
 }
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
@@ -12239,7 +12240,14 @@ section.portfolio .portfolio-item .custom-hover-caption {
 }
 
 .fa-ul li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.fa-gem {
+  font-size: 0.7rem;
+  opacity: 0.75;
+  transform: translateY(-1px);
+  color: var(--color-accent);
 }
 
 .problem-grid {
@@ -12268,10 +12276,6 @@ section.portfolio .portfolio-item .custom-hover-caption {
 
 .friction-collage {
   margin-bottom: 32px;
-}
-
-.fa-ul li {
-  margin-bottom: 14px;
 }
 
 .problem-section {
@@ -12464,10 +12468,6 @@ section.portfolio .portfolio-item .custom-hover-caption {
   color: #343a40;
 }
 
-.fa-ul li {
-  margin-bottom: 10px;
-}
-
 .result-li-1 strong,
 .result-li-2 strong,
 .result-li-3 strong,
@@ -12619,8 +12619,24 @@ section.portfolio .portfolio-item .custom-hover-caption {
 }
 
 .portfolio-modal h4 {
-	margin-top: 40px;
-	font-weight: 600;
+	font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  margin-top: 5rem;
+  
+  position: relative;
+  display: inline-block;
+}
+
+.portfolio-modal h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--color-accent);
+  margin-top: 10px;
 }
 
 .portfolio-modal h5, .portfolio-modal h6 {
@@ -12648,7 +12664,8 @@ section.portfolio .portfolio-item .custom-hover-caption {
 
 .portfolio-content p,
 .portfolio-content li{
-  line-height: 1.8;
+  line-height: 1;
+  color: var(--color-text);
 }
 
 .portfolio-content .fa-ul{
@@ -12955,18 +12972,18 @@ p {
 }
 
 .carousel-indicators button{
-    width: 6px !important;
-    height: 6px !important;
+    width: 10px !important;
+    height: 10px !important;
     border-radius: 50%;
     border: none;
-    background-color: #d1d1d1 !important;
+     background-color: rgba(124, 92, 255, 0.3) !important;
     opacity: 1;
     margin: 0 !important;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .carousel-indicators .active{
-    background-color: #0095f6 !important;
+    background-color: var(--color-accent) !important;
     transform: scale(1.15);
 }
 
@@ -12974,6 +12991,21 @@ p {
     display: block;
     width: 100%;
     border-radius: 22px;
+}
+
+/* CAROUSEL-INDICATORS FOR FOODBOX AND MILKTEA CUP */
+#TakoyakiFoodBoxIndicators button, #takoyakiMilkTeaCupIndicators button {
+  width: 28px !important;
+  height: 6px !important;
+  margin-top: 18px !important;
+  border-radius: 999px;
+}
+
+#takoyakiFoodBoxCarousel .carousel-inner {
+   border: 1px solid rgba(0,0,0,0.05);
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.03);
 }
 
 .ig-header{
@@ -13136,6 +13168,18 @@ p {
   opacity: 9;
 }
 
+#olivioOilBottleCarousel:hover .custom-nav{
+  opacity: 9;
+}
+
+#takoyakiFoodBoxCarousel:hover .custom-nav{
+  opacity: 9;
+}
+
+#takoyakiMilkTeaCupCarousel:hover .custom-nav{
+  opacity: 9;
+}
+
 #flowCarousel:hover .custom-nav{
   opacity: 9;
 } 
@@ -13257,27 +13301,28 @@ p {
 }
 
 .subheading {
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    position: relative;
-    padding-left: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-left: 14px;
 }
 
 .subheading::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 6px;
-    height: 6px;
-    background: var(--color-text-muted);
-    border-radius: 50%;
-    transform: translateY(-50%);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+
+  width: 2px;
+  height: 14px;
+
+  background: var(--color-accent);
+  border-radius: 999px;
 }
 
 .portfolio-image-wrapper {
@@ -13294,6 +13339,165 @@ p {
   height: auto;
 }
 
+/* Challenge Card Container */
+.challenge-card {
+    display: flex;
+    gap: 18px;
+
+    padding: 22px;
+    margin-bottom: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0,0,0,0.06);
+    border-left: 3px solid rgba(124, 92, 255, 0.5);
+    
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.challenge-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+
+    border-color: rgba(0,0,0,0.08);
+}
+
+/* Icon Container */
+.challenge-icon {
+    flex-shrink: 0;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(124, 92, 255, 0.08);
+
+    color: var(--color-accent);
+
+    font-size: 18px;
+}
+
+/* Text Content */
+.challenge-content h6 {
+    margin-bottom: 8px;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+.challenge-content p {
+    margin: 0;
+
+    color: #6c757d;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+/* Main section spacing */
+.portfolio-section {
+    margin-bottom: 0px;
+}
+
+/* Section headings */
+.portfolio-section h4 {
+
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Paragraph spacing */
+.portfolio-section p {
+    margin-bottom: 1rem;
+
+    line-height: 1.9;
+}
+
+/* List spacing */
+.portfolio-section ul {
+    margin-bottom: 0;
+}
+
+/* List item spacing */
+.portfolio-section li {
+    margin-bottom: 14px;
+
+    line-height: 1.8;
+}
+
+.meta-info {
+    margin-bottom: 2rem;
+}
+
+.meta-info p {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+}
+
+.color-meaning {
+    margin-top: 2rem;
+}
+
+.color-meaning h6 {
+    font-size: 1rem;
+    font-weight: 600;
+
+    margin-bottom: 0.35rem;
+
+    color: var(--color-text);
+}
+
+.label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: var(--color-text-muted);
+
+    margin-bottom: 1rem;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.color-card {
+  padding: 1.75rem;
+
+  border: 1px solid rgba(0,0,0,.06);
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,.35);
+
+  backdrop-filter: blur(8px);
+}
+
+.color-description {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    
+    margin-bottom: 1.25rem;
+
+    line-height: 1.7;
+}
 
 /* Tablet */
 @media (max-width: 991px){
@@ -13314,6 +13518,10 @@ p {
     .campaign-poster{
         max-height: 72vh;
         width: 100%;
+    }
+
+    .challenge-card {
+        flex-direction: column;
     }
 
 }
