@@ -13620,6 +13620,17 @@ p {
   background: #FF1E1E;
 }
 
+.deep-red {
+  background: #8B1E2D;
+}
+
+.midnight-blue {
+  background: #111827;
+}
+
+.blush-pink {
+  background: #F4879B;
+}
 
 .application-grid {
   display: grid;
@@ -13806,7 +13817,7 @@ p {
 }
 
 .variation-preview img{
-    max-height: 100px;
+    max-height: 150px;
     width: auto;
     object-fit: contain;
 }
@@ -13825,6 +13836,10 @@ p {
 
 .dark-bg{
     background: #1E1E1E;
+}
+
+.darkBlue-bg {
+  background: #000024;
 }
 
 .variation-caption{
