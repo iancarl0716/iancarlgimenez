@@ -268,11 +268,13 @@ body.thanks-page.fade-in {
 }
 
 hr {
-  margin: 1rem 0;
+  margin: 2rem 0;
   color: inherit;
   border: 0;
-  border-top: 0.125rem solid;
+  /* border-top: 0.125rem solid; */
   opacity: 0.25;
+  border-top: 0.125rem solid rgba(0,0,0,.07);
+  
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -12635,7 +12637,7 @@ section.portfolio .portfolio-item .custom-hover-caption {
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   
   position: relative;
@@ -13859,6 +13861,11 @@ p {
     line-height: 1.6;
     color: #666;
     margin: 0;
+}
+
+.campaign-adaptations-section {
+    max-width: 750px;
+    margin: 0 auto;
 }
 
 
