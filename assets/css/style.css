@@ -13634,6 +13634,22 @@ p {
   background: #F4879B;
 }
 
+.antique-gold {
+  background: #C4A15A;
+}
+
+.midnight-velvet {
+  background: #0F1423;
+}
+
+.warm-ivory {
+  background: #FBF9F4;
+}
+
+.dark-burgundy {
+  background: #6B1F2A;
+}
+
 .application-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -13842,6 +13858,14 @@ p {
 
 .darkBlue-bg {
   background: #000024;
+}
+
+.midnight-bg {
+  background: #0F1423;
+}
+
+.warm-ivory-bg {
+  background: #FBF9F4
 }
 
 .variation-caption{
