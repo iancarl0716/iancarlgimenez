@@ -12637,7 +12637,7 @@ section.portfolio .portfolio-item .custom-hover-caption {
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   margin-bottom: 2rem;
   
   position: relative;
@@ -12737,7 +12737,7 @@ h4 {
 } */
 
 h4 {
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 p {
@@ -13359,6 +13359,7 @@ p {
     gap: 18px;
 
     padding: 22px;
+    margin-top: 1rem;
     margin-bottom: 20px;
 
     background: #ffffff;
@@ -13424,6 +13425,7 @@ p {
 /* Main section spacing */
 .portfolio-section {
     margin-bottom: 0px;
+    margin-top: 4rem;
 }
 
 /* Section headings */
@@ -13519,7 +13521,8 @@ p {
 
   gap: 1.5rem;
 
-  margin-top: 2rem;
+  margin-top: 1rem;
+  /* margin-bottom: 2rem; */
 }
 
 .palette-card {
@@ -13654,7 +13657,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   height: fit-content;
 }
 
@@ -13691,7 +13694,7 @@ p {
 
 .logo-showcase{
   background: #F5F3F0;
-  padding: 2.5rem 2.5rem 1rem;
+  padding: 2rem;
   border-radius: 1.5rem;
   box-shadow: 0 20px 50px rgba(0,0,0,0.05);
 
@@ -13758,7 +13761,7 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .feature-card{
@@ -13810,7 +13813,7 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .variation-card{
