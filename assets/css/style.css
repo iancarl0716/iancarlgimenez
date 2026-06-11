@@ -13320,7 +13320,7 @@ p {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--color-text-muted);
-  margin-top: 2rem;
+  margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   position: relative;
   padding-left: 14px;
@@ -13895,6 +13895,43 @@ p {
     margin: 0 auto;
 }
 
+.mockup-showcase {
+    position: relative;
+    text-align: center;
+}
+
+.bottle-shadow {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+
+    width: 180px;
+    height: 35px;
+
+    transform: translateX(-50%);
+
+    background: rgba(0,0,0,0.15);
+
+    border-radius: 50%;
+
+    filter: blur(18px);
+
+    z-index: 1;
+}
+
+.bottle-mockup {
+    position: relative;
+    z-index: 2;
+    max-width: 350px;
+
+    filter:
+        drop-shadow(0 8px 8px rgba(0,0,0,0.05))
+        drop-shadow(0 25px 30px rgba(0,0,0,0.10));
+}
+
+.paragraph-block {
+  margin-bottom: 2rem;
+}
 
 /* Tablet */
 @media (max-width: 991px){
