@@ -13202,6 +13202,10 @@ p {
   opacity: 9;
 }
 
+#MockAndProperCarousel:hover .custom-nav{
+  opacity: 9;
+}
+
 #TravelgofersCarousel{
   position: relative;
 }
