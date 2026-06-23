@@ -12356,6 +12356,7 @@ section.portfolio .portfolio-item .custom-hover-caption {
 .polish-images {
   display: grid;
   gap: 16px;
+  margin-bottom: 2rem;
 }
 
 /* Design system = 2 columns */
