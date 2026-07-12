@@ -13964,3 +13964,52 @@ p {
     }
 
 }
+
+/* Campaign Deliverables */
+
+.campaign-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    margin-bottom:40px;
+}
+
+.campaign-grid img{
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.campaign-grid img:hover{
+    transform:translateY(-3px);
+}
+
+.banner-grid{
+    display:grid;
+    gap:20px;
+}
+
+.banner-grid img{
+    width:100%;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+    .campaign-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+    .campaign-grid{
+        grid-template-columns:1fr;
+    }
+
+}
